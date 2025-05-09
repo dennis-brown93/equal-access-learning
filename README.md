@@ -1,73 +1,218 @@
-# Welcome to your Lovable project
 
-## Project info
+# KindHearts NGO Website
 
-**URL**: https://lovable.dev/projects/6abf7a9c-6c0b-4d1c-872a-300e92f0b6e5
+This is a feature-rich NGO website built with React, Tailwind CSS, and various integrations for donations, content management, and email functionality.
 
-## How can I edit this code?
+## Core Features
 
-There are several ways of editing your application.
+- Responsive design with Home, About, Mission, Blog, and Contact pages
+- Donation functionality with Stripe integration
+- User-friendly donation form capturing donor information
+- MongoDB integration for storing user and donation data
+- SendGrid integration for email notifications
+- Contentful CMS integration for managing blog content
+- Admin dashboard for managing donations and users
 
-**Use Lovable**
+## Technology Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6abf7a9c-6c0b-4d1c-872a-300e92f0b6e5) and start prompting.
+### Frontend
+- React with TypeScript
+- Tailwind CSS for styling
+- shadcn/ui component library
+- React Router for navigation
+- React Query for data fetching
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- Node.js with Express
+- MongoDB (via Mongoose)
+- Stripe for payment processing
+- SendGrid for email notifications
+- Contentful for content management
 
-**Use your preferred IDE**
+## Project Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v14 or later)
+- MongoDB account
+- Stripe account
+- SendGrid account
+- Contentful account
 
-Follow these steps:
+### Installation
+
+1. Clone the repository:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone <repository-url>
+cd kindhearts-ngo
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```sh
+npm install
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Create a `.env` file in the project root with the following variables:
+
+```
+# MongoDB
+MONGODB_URI=your_mongodb_connection_string
+
+# Stripe
+STRIPE_PUBLIC_KEY=your_stripe_public_key
+STRIPE_SECRET_KEY=your_stripe_secret_key
+
+# SendGrid
+SENDGRID_API_KEY=your_sendgrid_api_key
+FROM_EMAIL=noreply@kindhearts.org
+
+# Contentful
+CONTENTFUL_SPACE_ID=your_contentful_space_id
+CONTENTFUL_ACCESS_TOKEN=your_contentful_access_token
+CONTENTFUL_ENVIRONMENT=master
+```
+
+4. Start the development server:
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## API Routes
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Donation Routes
 
-**Use GitHub Codespaces**
+- `POST /api/donate`: Process a donation via Stripe
+- `GET /api/donations`: Get all donations (admin only)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### User Routes
 
-## What technologies are used for this project?
+- `POST /api/users`: Create a new user
+- `GET /api/users`: Get all users (admin only)
+- `GET /api/users/:id`: Get a specific user
+- `PUT /api/users/:id`: Update a user
+- `DELETE /api/users/:id`: Delete a user
 
-This project is built with:
+### Newsletter Routes
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- `POST /api/newsletter/subscribe`: Subscribe a user to the newsletter
 
-## How can I deploy this project?
+## MongoDB Schema Structure
 
-Simply open [Lovable](https://lovable.dev/projects/6abf7a9c-6c0b-4d1c-872a-300e92f0b6e5) and click on Share -> Publish.
+### User Schema
 
-## Can I connect a custom domain to my Lovable project?
+```javascript
+{
+  name: String,
+  email: String,
+  role: String,
+  joinedAt: Date
+}
+```
 
-Yes, you can!
+### Donation Schema
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```javascript
+{
+  userId: ObjectId,
+  name: String,
+  email: String,
+  amount: Number,
+  currency: String,
+  message: String,
+  stripePaymentId: String,
+  status: String,
+  createdAt: Date
+}
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Newsletter Subscriber Schema
+
+```javascript
+{
+  email: String,
+  subscribedAt: Date,
+  active: Boolean
+}
+```
+
+## Contentful Setup
+
+### Content Types
+
+1. **Blog Post**
+   - Title (Short text)
+   - Slug (Short text)
+   - Author (Short text)
+   - Content (Rich text)
+   - Excerpt (Short text)
+   - Featured Image (Media)
+   - Category (Short text)
+   - Publication Date (Date)
+
+2. **Team Member**
+   - Name (Short text)
+   - Position (Short text)
+   - Bio (Rich text)
+   - Photo (Media)
+
+3. **Project**
+   - Title (Short text)
+   - Description (Rich text)
+   - Featured Image (Media)
+   - Location (Short text)
+   - Status (Short text)
+   - Start Date (Date)
+   - End Date (Date)
+
+## Deployment
+
+This project can be deployed to various platforms:
+
+- Netlify or Vercel for the frontend
+- Heroku, DigitalOcean, or AWS for the backend
+- MongoDB Atlas for the database
+
+## Project Structure
+
+```
+kindhearts-ngo/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── home/
+│   │   ├── donation/
+│   │   └── ui/
+│   ├── pages/
+│   ├── lib/
+│   ├── hooks/
+│   ├── App.tsx
+│   └── main.tsx
+├── server/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── index.js
+├── .env
+├── package.json
+└── README.md
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch: `git checkout -b feature/my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/my-new-feature`
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ for making a difference.
