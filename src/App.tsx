@@ -17,31 +17,35 @@ import DonatePage from "./pages/DonatePage";
 import AdminPage from "./pages/AdminPage";
 import NotFound from "./pages/NotFound";
 
+// Create the query client outside of the component
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Index />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="work" element={<WorkPage />} />
-            <Route path="join" element={<JoinPage />} />
-            <Route path="impact" element={<ImpactPage />} />
-            <Route path="blog" element={<BlogPage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="donate" element={<DonatePage />} />
-            <Route path="admin" element={<AdminPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+// Define App as a proper function component
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Index />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="work" element={<WorkPage />} />
+              <Route path="join" element={<JoinPage />} />
+              <Route path="impact" element={<ImpactPage />} />
+              <Route path="blog" element={<BlogPage />} />
+              <Route path="contact" element={<ContactPage />} />
+              <Route path="donate" element={<DonatePage />} />
+              <Route path="admin" element={<AdminPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
