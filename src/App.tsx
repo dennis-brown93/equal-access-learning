@@ -8,7 +8,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Index from "./pages/Index";
 import AboutPage from "./pages/AboutPage";
-import MissionPage from "./pages/MissionPage";
+import WorkPage from "./pages/WorkPage";
+import JoinPage from "./pages/JoinPage";
+import ImpactPage from "./pages/ImpactPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import DonatePage from "./pages/DonatePage";
@@ -27,7 +29,9 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="about" element={<AboutPage />} />
-            <Route path="mission" element={<MissionPage />} />
+            <Route path="work" element={<WorkPage />} />
+            <Route path="join" element={<JoinPage />} />
+            <Route path="impact" element={<ImpactPage />} />
             <Route path="blog" element={<BlogPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="donate" element={<DonatePage />} />
