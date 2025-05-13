@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -7,36 +6,41 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-    title: "Empower Communities",
-    description: "Supporting sustainable development in vulnerable regions around the world",
-    buttonText: "Our Projects",
-    buttonLink: "/work"
+    image: "/images/pexels-director-muuh-321947994-20101037.jpg",
+    title: "Unlocking Potential Through Education",
+    description:
+      "Empowering underserved communities in Nigeria with the tools for lifelong learning.",
+    buttonText: "Donate Now",
+    buttonLink: "/donate",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    image: "/images/pexels-swahili-studios-2151583083-31747999.jpg",
     title: "Educate for Tomorrow",
-    description: "Building schools and providing quality education to children in need",
+    description:
+      "Building schools and providing quality education to children in need",
     buttonText: "Education Programs",
-    buttonLink: "/work/education"
+    buttonLink: "/work/education",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    image: "/images/pexels-rdne-6646918.jpg",
     title: "Join Our Mission",
-    description: "Become part of our global volunteer network and make a difference",
+    description:
+      "Become part of our global volunteer network and make a difference",
     buttonText: "Volunteer Now",
-    buttonLink: "/join"
+    buttonLink: "/join",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1593113630400-ea4288922497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    image:
+      "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
     title: "Support Our Cause",
-    description: "Your donation helps us create lasting change in communities worldwide",
+    description:
+      "Your donation helps us create lasting change in communities worldwide",
     buttonText: "Donate Now",
-    buttonLink: "/donate"
-  }
+    buttonLink: "/donate",
+  },
 ];
 
 const RotatingBanner = () => {
@@ -87,7 +91,11 @@ const RotatingBanner = () => {
                 <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
                   {slide.description}
                 </p>
-                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-secondary hover:bg-secondary/90"
+                >
                   <Link to={slide.buttonLink}>{slide.buttonText}</Link>
                 </Button>
               </div>
@@ -103,7 +111,7 @@ const RotatingBanner = () => {
         <ChevronLeft size={24} />
         <span className="sr-only">Previous</span>
       </button>
-      
+
       <button
         onClick={goToNext}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/50 text-white p-2 rounded-full hover:bg-black/70"
@@ -111,7 +119,7 @@ const RotatingBanner = () => {
         <ChevronRight size={24} />
         <span className="sr-only">Next</span>
       </button>
-      
+
       <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
         {slides.map((_, index) => (
           <button

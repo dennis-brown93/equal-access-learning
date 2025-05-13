@@ -86,7 +86,11 @@ const Navbar = () => {
       <div className="container py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center">
-            <img src="" alt="Logo" className="h-10 w-auto" />
+            <img
+              src="/images/equalfffff_044048.jpg"
+              alt="Logo"
+              className="h-20 w-auto"
+            />
           </div>
         </Link>
 
@@ -97,7 +101,7 @@ const Navbar = () => {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/"
-                    className="text-foreground hover:text-primary-600 font-medium px-3"
+                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
                   >
                     Home
                   </Link>
@@ -107,7 +111,7 @@ const Navbar = () => {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/about"
-                    className="text-foreground hover:text-primary-600 font-medium px-3"
+                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
                   >
                     About Us
                   </Link>
@@ -117,7 +121,7 @@ const Navbar = () => {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/work"
-                    className="text-foreground hover:text-primary-600 font-medium px-3"
+                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
                   >
                     Our Work
                   </Link>
@@ -127,7 +131,7 @@ const Navbar = () => {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/join"
-                    className="text-foreground hover:text-primary-600 font-medium px-3"
+                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
                   >
                     Join Us
                   </Link>
@@ -137,7 +141,7 @@ const Navbar = () => {
                 <NavigationMenuLink asChild>
                   <Link
                     to="/impact"
-                    className="text-foreground hover:text-primary-600 font-medium px-3"
+                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
                   >
                     Impact
                   </Link>
@@ -146,7 +150,9 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <Button asChild className="bg-secondary hover:bg-secondary/90">
-            <Link to="/donate">Donate Now</Link>
+            <Link to="/donate" className="text-xs">
+              Donate Today
+            </Link>
           </Button>
         </div>
 
@@ -172,35 +178,35 @@ const Navbar = () => {
             </div>
             <Link
               to="/"
-              className="text-foreground hover:text-primary-600 font-medium py-2"
+              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-foreground hover:text-primary-600 font-medium py-2"
+              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
               onClick={() => setIsOpen(false)}
             >
               About Us
             </Link>
             <Link
               to="/work"
-              className="text-foreground hover:text-primary-600 font-medium py-2"
+              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
               onClick={() => setIsOpen(false)}
             >
               Our Work
             </Link>
             <Link
               to="/join"
-              className="text-foreground hover:text-primary-600 font-medium py-2"
+              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
               onClick={() => setIsOpen(false)}
             >
               Join Us
             </Link>
             <Link
               to="/impact"
-              className="text-foreground hover:text-primary-600 font-medium py-2"
+              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
               onClick={() => setIsOpen(false)}
             >
               Impact
