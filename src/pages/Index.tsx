@@ -1,6 +1,7 @@
 
 import RotatingBanner from "@/components/home/RotatingBanner";
-import ImpactSection from "@/components/home/ImpactSection";
+import AboutUsSection from "@/components/home/AboutUsSection";
+import VisionMissionSection from "@/components/home/VisionMissionSection";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import CallToAction from "@/components/home/CallToAction";
@@ -12,7 +13,8 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <RotatingBanner />
-      <ImpactSection />
+      <AboutUsSection />
+      <VisionMissionSection />
       <FeaturedProjects />
       <BlogCarousel />
       <TestimonialSection />
