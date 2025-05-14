@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AimsObjectives from "@/components/about/AimsObjectives";
 
 const AboutPage = () => {
   return (
@@ -42,6 +43,8 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      
+      <AimsObjectives />
       
       <section className="section bg-gray-50">
         <div className="container">
