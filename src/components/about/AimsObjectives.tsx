@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { School, Users, HandHeart, Bulb, Handshake } from "lucide-react";
+import { School, Users, HandHeart, Lightbulb, Handshake } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const objectives = [
@@ -22,7 +22,7 @@ const objectives = [
   {
     title: "Strengthen Teacher Capacity and Learning Resources",
     description: "Enhance the skills of educators and improve the availability of learning materials and infrastructure.",
-    icon: Bulb,
+    icon: Lightbulb,
     iconBg: "bg-amber-100",
     color: "text-amber-600"
   },
