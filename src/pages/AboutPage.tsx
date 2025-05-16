@@ -1,14 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import AimsObjectives from "@/components/about/AimsObjectives";
 
 const AboutPage = () => {
   return (
     <main className="min-h-screen">
       <div className="bg-primary-100 py-16">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">About EALF</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">About KindHearts</h1>
           <p className="text-lg text-gray-700 max-w-3xl">
             Learn about our organization, our team, and our journey of creating positive change.
           </p>
@@ -21,21 +20,21 @@ const AboutPage = () => {
             <div>
               <h2 className="text-3xl font-serif font-bold mb-6">Our Story</h2>
               <p className="text-gray-700 mb-4">
-                The Equal Access Learning Foundation (EALF) is a Nigerian not-for-profit, non-political organization committed to transforming education for underserved and marginalized communities. We believe that every child deserves the opportunity to learn, grow, and thrive regardless of their location, gender, or ability. 
+                KindHearts was founded in 2008 with a simple mission: to make a positive difference in the lives of those facing poverty, illness, and lack of opportunity around the world.
               </p>
               <p className="text-gray-700 mb-4">
-                The organization is dedicated to establishing libraries, strengthening educator capacity, and promoting equal learning access for all children, including those with disabilities.
+                What began as a small group of dedicated volunteers has grown into a global organization with projects in over 30 countries. Throughout our journey, we've remained committed to sustainable development, community empowerment, and transparent operations.
               </p>
               <p className="text-gray-700">
-                Founded on the principle of educational equity, EALF works to break down the systemic barriers that hinder access to quality learning. Through partnerships, community engagement, and innovation, we strive to create inclusive learning environments where no child is left behind
+                Today, KindHearts works with local partners to implement programs in education, healthcare, clean water access, and economic empowerment. We believe in creating lasting change by addressing both immediate needs and long-term development goals.
               </p>
             </div>
             <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary-300 rounded-lg transform -rotate-3"></div>
                 <img 
-                  src="/images/pexels-seyhmuskino-28593055.jpg" 
-                  alt="team" 
+                  src="/placeholder.svg" 
+                  alt="KindHearts team" 
                   className="relative z-10 rounded-lg shadow-lg w-full max-w-md"
                 />
               </div>
@@ -43,8 +42,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
-      <AimsObjectives />
       
       <section className="section bg-gray-50">
         <div className="container">
