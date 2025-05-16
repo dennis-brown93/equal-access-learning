@@ -10,7 +10,7 @@ const VisionMissionSection = () => {
             Our Vision & Mission
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Guiding principles that drive our work and impact.
+            Guiding principles that drive our work and impact around the world.
           </p>
         </div>
 
@@ -18,7 +18,7 @@ const VisionMissionSection = () => {
           {/* Vision Card */}
           <VisionMissionCard
             title="Our Vision"
-            content="To promote inclusive, equitable, and quality education for underserved and marginalized communities in Nigeria by removing barriers to learning, empowering educators, and fostering community-driven solutions for lifelong learning."
+            content="A world where every individual has access to the resources, opportunities, and support needed to live a dignified life and reach their full potential."
             icon={<Lightbulb className="h-6 w-6" />}
             iconBg="bg-primary-200"
           />
@@ -26,8 +26,7 @@ const VisionMissionSection = () => {
           {/* Mission Card */}
           <VisionMissionCard
             title="Our Mission"
-            content="A Nigeria where every child and youth, regardless of background or location, has equal access to learning opportunities that unlock their full potential and contribute to national development.
-"
+            content="To empower communities through sustainable development initiatives, focusing on education, healthcare, economic empowerment, and disaster relief to create lasting positive change."
             icon={<Target className="h-6 w-6" />}
             iconBg="bg-secondary/10"
           />

@@ -37,14 +37,18 @@ const AboutUsSection = () => {
           {/* Right Column - Text Content */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-serif font-bold">
-              About Us
+              About KindHearts NGO
             </h2>
             <p className="text-lg text-gray-700">
-              The Equal Access Learning Foundation (EALF) is a Nigerian not-for-profit, non-political organization committed to transforming education for underserved and marginalized communities.
+              KindHearts is a humanitarian organization dedicated to improving
+              the lives of vulnerable communities worldwide. Founded in 2010, we
+              have been working tirelessly to provide education, healthcare, and
+              sustainable development solutions to those in need.
             </p>
             <p className="text-lg text-gray-700">
-              We believe that every child deserves the opportunity to learn, grow, and thrive—regardless of their location, gender, or ability.
-
+              Our team of dedicated volunteers and staff members work on the
+              ground in over 30 countries, developing community-led initiatives
+              that create lasting impact and positive change.
             </p>
             <Button
               asChild
