@@ -106,7 +106,7 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-white/20 text-white/60 text-sm">
           <div className="flex flex-col md:flex-row justify-between gap-4">
-            <p>&copy; {new Date().getFullYear()} KindHearts NGO. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Designed by Switchboard.Uk. All rights reserved.</p>
             <div className="flex space-x-6">
               <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-white">Terms of Service</Link>

@@ -91,4 +91,5 @@ const VisionMissionCard = ({
     </motion.div>
   );
 };
-;
+
+export default VisionMissionSection;
