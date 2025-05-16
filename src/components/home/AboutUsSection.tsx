@@ -37,7 +37,7 @@ const AboutUsSection = () => {
           {/* Right Column - Text Content */}
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-serif font-bold">
-              About Equal Access Learning Foundation
+              About Us
             </h2>
             <p className="text-lg text-gray-700">
               The Equal Access Learning Foundation (EALF) is a Nigerian not-for-profit, non-political organization committed to transforming education for underserved and marginalized communities.

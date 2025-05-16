@@ -7,7 +7,7 @@ const AboutPage = () => {
     <main className="min-h-screen">
       <div className="bg-primary-100 py-16">
         <div className="container">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">About KindHearts</h1>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4">About EALF</h1>
           <p className="text-lg text-gray-700 max-w-3xl">
             Learn about our organization, our team, and our journey of creating positive change.
           </p>
@@ -20,21 +20,21 @@ const AboutPage = () => {
             <div>
               <h2 className="text-3xl font-serif font-bold mb-6">Our Story</h2>
               <p className="text-gray-700 mb-4">
-                KindHearts was founded in 2008 with a simple mission: to make a positive difference in the lives of those facing poverty, illness, and lack of opportunity around the world.
+                The Equal Access Learning Foundation (EALF) is a Nigerian not-for-profit, non-political organization committed to transforming education for underserved and marginalized communities. We believe that every child deserves the opportunity to learn, grow, and thrive regardless of their location, gender, or ability.
               </p>
               <p className="text-gray-700 mb-4">
-                What began as a small group of dedicated volunteers has grown into a global organization with projects in over 30 countries. Throughout our journey, we've remained committed to sustainable development, community empowerment, and transparent operations.
+                The organization is dedicated to establishing libraries, strengthening educator capacity, and promoting equal learning access for all children, including those with disabilities.
               </p>
               <p className="text-gray-700">
-                Today, KindHearts works with local partners to implement programs in education, healthcare, clean water access, and economic empowerment. We believe in creating lasting change by addressing both immediate needs and long-term development goals.
+                Founded on the principle of educational equity, EALF works to break down the systemic barriers that hinder access to quality learning. Through partnerships, community engagement, and innovation, we strive to create inclusive learning environments where no child is left behind.
               </p>
             </div>
             <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary-300 rounded-lg transform -rotate-3"></div>
                 <img 
-                  src="/placeholder.svg" 
-                  alt="KindHearts team" 
+                  src="/images/pexels-seyhmuskino-28593055.jpg" 
+                  alt="" 
                   className="relative z-10 rounded-lg shadow-lg w-full max-w-md"
                 />
               </div>
@@ -43,41 +43,6 @@ const AboutPage = () => {
         </div>
       </section>
       
-      <section className="section bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl font-serif font-bold mb-12 text-center">Our Core Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Compassion",
-                icon: "❤️",
-                description: "We approach our work with empathy and a deep respect for the dignity of those we serve."
-              },
-              {
-                title: "Integrity",
-                icon: "🤝",
-                description: "We maintain the highest ethical standards and transparency in all our operations."
-              },
-              {
-                title: "Innovation",
-                icon: "💡",
-                description: "We seek creative solutions to complex challenges and continuously improve our approaches."
-              },
-              {
-                title: "Sustainability",
-                icon: "🌱",
-                description: "We design programs that create lasting change and empower communities to thrive independently."
-              }
-            ].map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-serif font-bold mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       
       <section className="section bg-white">
         <div className="container">
