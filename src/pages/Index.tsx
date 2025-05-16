@@ -1,5 +1,4 @@
 import RotatingBanner from "@/components/home/RotatingBanner";
-import FeaturedProjects from "@/components/home/FeaturedProjects";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import CallToAction from "@/components/home/CallToAction";
 import BlogCarousel from "@/components/home/BlogCarousel";
@@ -14,7 +13,6 @@ const Index = () => {
       <RotatingBanner />
       <AboutUsSection />
       <VisionMissionSection />
-      <FeaturedProjects />
       <BlogCarousel />
       <TestimonialSection />
       <VolunteerForm />
