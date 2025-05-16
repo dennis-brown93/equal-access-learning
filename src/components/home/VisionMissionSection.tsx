@@ -53,33 +53,42 @@ const VisionMissionCard = ({
   return (
     <motion.div
       className="bg-white rounded-lg p-6 h-full"
-      whileHover={{
-        scale: 1.03,
-        boxShadow:
-          "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-        transition: { duration: 0.3 },
+      whileHover="hover"
+      initial="rest"
+      animate="rest"
+      variants={{
+        rest: { scale: 1, boxShadow: "0 1px 3px rgba(0,0,0,0.1)" },
+        hover: {
+          scale: 1.03,
+          boxShadow:
+            "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)",
+        },
       }}
-      initial={{
-        boxShadow:
-          "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-      }}
+      transition={{ duration: 0.3 }}
     >
       <div className="flex flex-col h-full">
-        <div className="flex items-start mb-4">
+        <motion.div
+          className="flex items-start mb-4"
+          variants={{
+            rest: {},
+            hover: { transition: { staggerChildren: 0.1 } },
+          }}
+        >
           <motion.div
             className={`p-3 rounded-full mr-4 ${iconBg}`}
-            initial={{ x: -20, opacity: 0 }}
-            whileHover={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            variants={{
+              rest: { x: -10, opacity: 0 },
+              hover: { x: 0, opacity: 1 },
+            }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             {icon}
           </motion.div>
           <h3 className="text-2xl font-serif font-bold">{title}</h3>
-        </div>
+        </motion.div>
         <p className="text-gray-700 flex-grow">{content}</p>
       </div>
     </motion.div>
   );
 };
-
-export default VisionMissionSection;
+;

@@ -25,8 +25,16 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
-            <h3 className="font-serif text-2xl font-bold mb-4">KindHearts</h3>
-            <p className="mb-6">Making a difference in the lives of those who need it most through sustainable development, education, and compassion.</p>
+            <Link to="/" className="flex items-center space-x-2 pb-8">
+          <div className="flex items-center">
+            <img
+              src="/images/equalfffff_044048.jpg"
+              alt="Logo"
+              className="h-20 w-auto"
+            />
+          </div>
+        </Link>
+            <p className="mb-6">Empowering underserved communities in Nigeria with the tools for lifelong learning.</p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
                 <Facebook size={18} />
