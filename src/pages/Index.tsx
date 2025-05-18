@@ -1,3 +1,4 @@
+
 import RotatingBanner from "@/components/home/RotatingBanner";
 import TestimonialSection from "@/components/home/TestimonialSection";
 import CallToAction from "@/components/home/CallToAction";
@@ -6,6 +7,8 @@ import VolunteerForm from "@/components/home/VolunteerForm";
 import NewsletterPopup from "@/components/home/NewsletterPopup";
 import AboutUsSection from "@/components/home/AboutUsSection";
 import VisionMissionSection from "@/components/home/VisionMissionSection";
+import WhatWeDoSection from "@/components/home/WhatWeDoSection";
+import PartnershipSection from "@/components/home/PartnershipSection";
 
 const Index = () => {
   return (
@@ -13,6 +16,8 @@ const Index = () => {
       <RotatingBanner />
       <AboutUsSection />
       <VisionMissionSection />
+      <WhatWeDoSection />
+      <PartnershipSection />
       <BlogCarousel />
       <TestimonialSection />
       <VolunteerForm />
