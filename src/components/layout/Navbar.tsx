@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import {
   Twitter,
   Instagram,
   Globe,
+  ChevronDown,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
@@ -16,7 +18,15 @@ import {
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -118,14 +128,29 @@ const Navbar = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/work"
-                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
-                  >
-                    Our Work
-                  </Link>
-                </NavigationMenuLink>
+                <NavigationMenuTrigger className="font-thin text-sm">
+                  Our Work
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-[200px] gap-1 p-2">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/work"
+                        className="block py-2 px-2 rounded hover:bg-accent"
+                      >
+                        Our Projects
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/impact"
+                        className="block py-2 px-2 rounded hover:bg-accent"
+                      >
+                        Impact
+                      </Link>
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
@@ -134,16 +159,6 @@ const Navbar = () => {
                     className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
                   >
                     Join Us
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link
-                    to="/impact"
-                    className="text-foreground hover:text-primary-600 font-thin px-3 text-sm"
-                  >
-                    Impact
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -190,26 +205,37 @@ const Navbar = () => {
             >
               About Us
             </Link>
-            <Link
-              to="/work"
-              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
-              onClick={() => setIsOpen(false)}
-            >
-              Our Work
-            </Link>
+            
+            {/* Our Work Dropdown for mobile */}
+            <div className="py-2">
+              <div className="flex items-center justify-between text-foreground font-thin text-sm">
+                <span>Our Work</span>
+                <ChevronDown size={16} />
+              </div>
+              <div className="pl-4 mt-2 space-y-2">
+                <Link
+                  to="/work"
+                  className="block text-foreground hover:text-primary-600 font-thin py-1 text-sm"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Our Projects
+                </Link>
+                <Link
+                  to="/impact"
+                  className="block text-foreground hover:text-primary-600 font-thin py-1 text-sm"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Impact
+                </Link>
+              </div>
+            </div>
+            
             <Link
               to="/join"
               className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
               onClick={() => setIsOpen(false)}
             >
               Join Us
-            </Link>
-            <Link
-              to="/impact"
-              className="text-foreground hover:text-primary-600 font-thin py-2 text-sm"
-              onClick={() => setIsOpen(false)}
-            >
-              Impact
             </Link>
             <Button
               asChild
