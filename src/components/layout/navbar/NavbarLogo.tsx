@@ -7,7 +7,7 @@ const NavbarLogo = () => {
     <Link to="/" className="flex items-center space-x-2">
       <div className="flex items-center">
         <img
-          src="/images/equalfffff_044048.jpg"
+          src="/images/equal_024606.png"
           alt="Logo"
           className="h-20 w-auto"
         />
