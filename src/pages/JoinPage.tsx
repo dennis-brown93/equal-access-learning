@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { HandHelping, Handshake, Megaphone, Book, GraduationCap, Wheelchair, Girl, Laptop } from "lucide-react";
+import { HandHelping, Handshake, Megaphone, Book, GraduationCap, Accessibility, Baby, Heart, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
@@ -62,15 +62,15 @@ const JoinPage = () => {
       text: "Train teachers to better serve their students"
     },
     {
-      icon: <Wheelchair className="h-6 w-6" />,
+      icon: <Accessibility className="h-6 w-6" />,
       text: "Provide learning materials for children with disabilities"
     },
     {
-      icon: <Girl className="h-6 w-6" />,
+      icon: <Baby className="h-6 w-6" />,
       text: "Empower girls through targeted educational programs"
     },
     {
-      icon: <Laptop className="h-6 w-6" />,
+      icon: <BookOpen className="h-6 w-6" />,
       text: "Bring digital education to the most remote areas"
     }
   ];
