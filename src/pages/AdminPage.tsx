@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   Card,
@@ -17,6 +16,10 @@ import {
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
+import AdminHeader from "@/components/admin/AdminHeader";
+import QuickStats from "@/components/admin/QuickStats";
+import DonationChart from "@/components/admin/DonationChart";
+import RecentActivity from "@/components/admin/RecentActivity";
 import { Button } from "@/components/ui/button";
 
 // Mock data for admin dashboard
@@ -167,40 +170,15 @@ const AdminPage = () => {
   );
   
   return (
-    <main className="min-h-screen bg-gray-50 py-8">
-      <div className="container">
-        <h1 className="text-3xl font-serif font-bold mb-8">Admin Dashboard</h1>
+    <div className="min-h-screen bg-gray-50">
+      <AdminHeader />
+      
+      <main className="container py-8">
+        <QuickStats />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Total Donations</CardTitle>
-              <CardDescription>Overall donations received</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">${totalDonations.toLocaleString()}</p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Average Donation</CardTitle>
-              <CardDescription>Average amount per donation</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">${averageDonation.toFixed(2)}</p>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Total Donors</CardTitle>
-              <CardDescription>Unique donors</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold">{donorCount}</p>
-            </CardContent>
-          </Card>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <DonationChart />
+          <RecentActivity />
         </div>
         
         <div className="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -329,8 +307,8 @@ const AdminPage = () => {
             </Card>
           </TabsContent>
         </Tabs>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 
