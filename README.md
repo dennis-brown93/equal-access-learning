@@ -1,5 +1,4 @@
-
-# KindHearts NGO Website
+# EALF NGO Website
 
 This is a feature-rich NGO website built with React, Tailwind CSS, and various integrations for donations, content management, and email functionality.
 
@@ -16,6 +15,7 @@ This is a feature-rich NGO website built with React, Tailwind CSS, and various i
 ## Technology Stack
 
 ### Frontend
+
 - React with TypeScript
 - Tailwind CSS for styling
 - shadcn/ui component library
@@ -23,6 +23,7 @@ This is a feature-rich NGO website built with React, Tailwind CSS, and various i
 - React Query for data fetching
 
 ### Backend
+
 - Node.js with Express
 - MongoDB (via Mongoose)
 - Stripe for payment processing
@@ -143,6 +144,7 @@ npm run dev
 ### Content Types
 
 1. **Blog Post**
+
    - Title (Short text)
    - Slug (Short text)
    - Author (Short text)
@@ -153,6 +155,7 @@ npm run dev
    - Publication Date (Date)
 
 2. **Team Member**
+
    - Name (Short text)
    - Position (Short text)
    - Bio (Rich text)
