@@ -181,7 +181,7 @@ This project can be deployed to various platforms:
 ## Project Structure
 
 ```
-kindhearts-ngo/
+EALF-ngo/
 ├── public/
 ├── src/
 │   ├── components/
