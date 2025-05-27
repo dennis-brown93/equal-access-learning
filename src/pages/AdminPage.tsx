@@ -42,7 +42,7 @@ const mockDonations = [
   },
   {
     id: "d3",
-    name: "Michael Brown",
+    name: "Dennis Brown",
     email: "mbrown@example.com",
     amount: 50,
     date: "2023-05-12",
