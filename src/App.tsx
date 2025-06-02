@@ -15,6 +15,7 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import DonatePage from "./pages/DonatePage";
 import AdminPage from "./pages/AdminPage";
+import CookiePolicyPage from "./pages/CookiePolicyPage";
 import NotFound from "./pages/NotFound";
 
 // Create the query client outside of the component
@@ -39,6 +40,7 @@ function App() {
               <Route path="contact" element={<ContactPage />} />
               <Route path="donate" element={<DonatePage />} />
               <Route path="admin" element={<AdminPage />} />
+              <Route path="cookie-policy" element={<CookiePolicyPage />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
