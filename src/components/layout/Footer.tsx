@@ -67,10 +67,10 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg font-bold mb-4">Contact Info</h4>
             <address className="not-italic">
-              <p className="mb-2">123 Charity Lane</p>
-              <p className="mb-2">Helpville, CA 90210</p>
-              <p className="mb-2">contact@kindhearts.org</p>
-              <p>(555) 123-4567</p>
+              <p className="mb-2">5, Adegboyega Awomolo Close</p>
+              <p className="mb-2">Abuja, FCT, Nigeria</p>
+              <p className="mb-2">info@equalaccesslearning.org</p>
+              <p>08033053259</p>
             </address>
           </div>
           
@@ -98,7 +98,7 @@ const Footer = () => {
                   className="mt-1" 
                   required
                 />
-                <span>I agree to receive emails from KindHearts and understand that I can unsubscribe at any time.</span>
+                <span>I agree to receive emails from Equal Access Learning Foundation and understand that I can unsubscribe at any time.</span>
               </label>
             </form>
           </div>
@@ -106,10 +106,11 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-white/20 text-white/60 text-sm">
           <div className="flex flex-col md:flex-row justify-between gap-4">
-            <p>&copy; {new Date().getFullYear()} Designed by Switchboard.Uk. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Equal Access Learning Foundation. All rights reserved.</p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-white">Terms of Service</Link>
+              <Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+              <Link to="/terms-conditions" className="hover:text-white">Terms & Conditions</Link>
+              <Link to="/cookie-policy" className="hover:text-white">Cookie Policy</Link>
             </div>
           </div>
         </div>
